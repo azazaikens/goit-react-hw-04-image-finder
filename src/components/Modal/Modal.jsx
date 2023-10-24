@@ -18,14 +18,14 @@ export const Modal = ({ data, onCloseModal }) => {
 
   const handlOverlayClick = event => {
     if (event.target === event.currentTarget) {
-      this.props.onCloseModal();
+      onCloseModal();
     }
   };
 
   return (
     <div className={style.Overlay} onClick={handlOverlayClick}>
       <div className={style.Modal}>
-        <img src={this.props.data} alt="somebody" />
+        <img src={data} alt="somebody" />
       </div>
     </div>
   );
